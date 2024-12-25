@@ -1,4 +1,4 @@
-import { revalidateTag, unstable_cacheTag } from 'next/cache';
+import { revalidateTag } from 'next/cache';
 import Form from 'next/form';
 import { Button } from '@mantine/core';
 import { Chart } from './_components/chart';
@@ -6,8 +6,6 @@ import { Calendar } from './_components/calendar';
 import { getGohanData } from '@/utils/getGohanData';
 
 export default async function Home() {
-  'use cache';
-  unstable_cacheTag('gohan-data');
   const results = await getGohanData();
 
   const data = results.reduce((acc: Data, result) => {
