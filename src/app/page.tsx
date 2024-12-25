@@ -1,4 +1,4 @@
-import { revalidateTag, unstable_cacheTag } from 'next/cache';
+import { revalidateTag } from 'next/cache';
 import { getDatabase } from './getDatabase';
 import Form from 'next/form';
 import { Button } from '@mantine/core';
