@@ -1,5 +1,4 @@
 'use server';
-import 'server-only';
 
 import { Client } from '@notionhq/client';
 
