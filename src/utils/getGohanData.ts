@@ -1,15 +1,11 @@
 'use server';
 
 import { getDatabase } from '@/app/getDatabase';
-import { unstable_cacheTag } from 'next/cache';
 
 function isDefined<T>(value: T | undefined): value is T {
   return value !== undefined;
 }
 export const getGohanData = async () => {
-  'use cache';
-  unstable_cacheTag('gohan-data');
-
   const response = await getDatabase();
 
   return response.results
