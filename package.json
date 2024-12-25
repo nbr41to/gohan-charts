@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mantine/charts": "^7.15.2",
+    "@mantine/core": "^7.15.2",
+    "@notionhq/client": "^2.2.15",
+    "next": "^15.1.1-canary.18",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.1.2"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "typescript": "^5",
