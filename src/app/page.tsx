@@ -3,6 +3,7 @@ import { getDatabase } from './getDatabase';
 import Form from 'next/form';
 import { Button } from '@mantine/core';
 import { Chart } from './_components/chart';
+import { Calendar } from './_components/calendar';
 
 function isDefined<T>(value: T | undefined): value is T {
   return value !== undefined;
@@ -41,10 +42,6 @@ const getGohanData = async () => {
     .filter(isDefined);
 };
 
-type Data = ({
-  date: string;
-} & Record<string, number>)[];
-
 export default async function Home() {
   const results = await getGohanData();
 
@@ -81,8 +78,12 @@ export default async function Home() {
   };
 
   return (
-    <div className="space-y-4 p-2">
+    <div className="space-y-8 p-2">
       <h1 className="font-bold text-lg">YUKIGOHAN</h1>
+
+      <div className="mx-auto w-fit">
+        <Calendar data={data} />
+      </div>
 
       <Chart data={data} />
 
