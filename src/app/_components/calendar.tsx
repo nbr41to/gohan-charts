@@ -15,9 +15,9 @@ export const Calendar = ({ data }: Props) => {
       renderDay={(date) => {
         const day = date.getDate();
         const weekDay = date.getDay();
-        const dateString = `${date.getFullYear()}/${
-          date.getMonth() + 1
-        }/${day}`;
+        const dateString = `${date.getFullYear()}/${(date.getMonth() + 1)
+          .toString()
+          .padStart(2, '0')}/${day.toString().padStart(2, '0')}`;
         const dateData = data.find((item) => item.date === dateString);
         const dateDataKeys = dateData ? Object.keys(dateData) : [];
 

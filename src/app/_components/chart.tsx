@@ -7,13 +7,14 @@ type Props = {
 };
 
 export const Chart = ({ data }: Props) => {
-  const width = data.length * 80;
+  const width = data.length * 88;
 
   return (
     <div className="overflow-x-scroll w-full">
       <LineChart
         w={width}
         h={400}
+        px={12}
         data={data}
         dataKey="date"
         series={[
