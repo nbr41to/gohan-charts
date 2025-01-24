@@ -4,7 +4,6 @@ import { Button } from '@mantine/core';
 import { Chart } from './_components/chart';
 import { Calendar } from './_components/calendar';
 import { getGohanData } from '@/utils/getGohanData';
-import { CompositeChart } from '@mantine/charts';
 
 export default async function Home() {
   const results = await getGohanData();
